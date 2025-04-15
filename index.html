@@ -10,23 +10,32 @@
         function getComputerChoice(max){
             let random_no = Math.floor(Math.random() * max);
             if (random_no === 0){
-                console.log("The computers choice is Rock");
+                return("The computers choice is Rock");
             }
             else if (random_no === 1){
-                console.log("The computers choice is Paper");
+                return("The computers choice is Paper");
             }
             else{
-                console.log("The computers choice is Scissors");
+                return("The computers choice is Scissors");
             }
         }
-        // console.log(getComputerChoice(3));
+        console.log(getComputerChoice(3));
         function getHumanChoice(str){
             let input = prompt("Enter you choice: Rock | Paper | Scissors");
             console.log("Your choice is " + input);
         }
+
+        function capitalise(string){
+            return string[0].toUpperCase() + string.slice(1);
+        }
+        // console.log(capitalise("rbsrtb"));
         // console.log(getHumanChoice());
         let humanScore = 0;
         let computerScore = 0;
+
+        function playRound(humanChoice, computerChoice){
+
+        }
     </script>
 </body>
 </html>
