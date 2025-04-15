@@ -35,13 +35,32 @@
         }
         // console.log(capitalise("rbsrtb"));
         // console.log(getHumanChoice());
-        let humanScore = 0;
-        let computerScore = 0;
+        // let humanScore = 0;
+        // let computerScore = 0;
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice(3);
         // console.log(computerChoice);
 
-        function playRound(humanChoice, computerChoice){
+        // function playRound(humanChoice, computerChoice){
+        //     if(humanChoice === computerChoice){
+        //         console.log("This round is a tie!");
+        //         console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+        //     } else if((humanChoice === "Rock" && computerChoice === "Scissors")||(humanChoice === "Paper" && computerChoice === "Rock")||(humanChoice === "Scissors" && computerChoice === "Paper")){
+        //         console.log("You win!");
+        //         ++humanScore;
+        //         console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+        //     } else {
+        //         console.log("You lose!");
+        //         ++computerScore;
+        //         console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+        //     }
+        // }
+        // playRound(humanSelection, computerSelection); //call  the playRound function
+
+        function playGame(){
+            let humanScore = 0;
+            let computerScore = 0;
+            function playRound(humanChoice, computerChoice){
             if(humanChoice === computerChoice){
                 console.log("This round is a tie!");
                 console.log("Your score: " + humanScore + " Computers score: " + computerScore);
@@ -55,7 +74,7 @@
                 console.log("Your score: " + humanScore + " Computers score: " + computerScore);
             }
         }
-        playRound(humanSelection, computerSelection); //call  the playRound function
+        }
     </script>
 </body>
 </html>
