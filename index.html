@@ -7,7 +7,11 @@
 </head>
 <body>
     <script>
-        console.log("Hello world");
+        function getComputerChoice(max){
+            let random_no = Math.floor(Math.random() * max);
+            console.log(random_no);
+        }
+        console.log(getComputerChoice(3));
     </script>
 </body>
 </html>
