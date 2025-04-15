@@ -19,17 +19,17 @@
                 return("The computers choice is Scissors");
             }
         }
-        console.log(getComputerChoice(3));
+        // console.log(getComputerChoice(3));
         function getHumanChoice(str){
             let input = prompt("Enter you choice: Rock | Paper | Scissors");
-            console.log("Your choice is " + input);
+            console.log("Your choice is " + capitalise(input));
         }
 
         function capitalise(string){
-            return string[0].toUpperCase() + string.slice(1);
+            return string[0].toUpperCase() + string.slice(1).toLowerCase();
         }
         // console.log(capitalise("rbsrtb"));
-        // console.log(getHumanChoice());
+        console.log(getHumanChoice());
         let humanScore = 0;
         let computerScore = 0;
 
