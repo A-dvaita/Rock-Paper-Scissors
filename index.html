@@ -10,13 +10,16 @@
         function getComputerChoice(max){
             let random_no = Math.floor(Math.random() * max);
             if (random_no === 0){
-                return("The computers choice is Rock");
+                console.log(("The computers choice is Rock"));
+                return "Rock";
             }
             else if (random_no === 1){
-                return("The computers choice is Paper");
+                console.log(("The computers choice is Paper"));
+                return "Paper";
             }
             else{
-                return("The computers choice is Scissors");
+                console.log(("The computers choice is Scissors"));
+                return "Scissors";
             }
         }
         // console.log(getComputerChoice(3));
