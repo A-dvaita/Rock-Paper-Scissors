@@ -9,7 +9,15 @@
     <script>
         function getComputerChoice(max){
             let random_no = Math.floor(Math.random() * max);
-            console.log(random_no);
+            if (random_no === 0){
+                console.log("The computers choice is Rock");
+            }
+            else if (random_no === 1){
+                console.log("The computers choice is Paper");
+            }
+            else{
+                console.log("The computers choice is Scissors");
+            }
         }
         // console.log(getComputerChoice(3));
         function getHumanChoice(str){
