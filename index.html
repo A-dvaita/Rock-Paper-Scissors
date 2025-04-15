@@ -25,7 +25,9 @@
         // console.log(getComputerChoice(3));
         function getHumanChoice(){
             let input = prompt("Enter you choice: Rock | Paper | Scissors");
-            console.log("Your choice is " + capitalise(input));
+            let choice = capitalise(input);
+            console.log("Your choice is " + choice);
+            return choice;
         }
 
         function capitalise(string){
@@ -53,7 +55,7 @@
                 console.log("Your score: " + humanScore + " Computers score: " + computerScore);
             }
         }
-        console.log(playRound());
+        playRound(humanSelection, computerSelection);
     </script>
 </body>
 </html>
