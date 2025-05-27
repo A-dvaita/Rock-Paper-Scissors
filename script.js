@@ -13,8 +13,12 @@ function getComputerChoice(max){
         //get player choice by taking input from button clicked by player
         let choice = '';
         let compChoice = '';
+
         let hChoice = document.querySelector('#hChoice');
         let cChoice = document.querySelector('#cChoice');
+
+        let humanScore = 0;
+        let computerScore = 0;
 
         let rbtn = document.querySelector('.rbtn');
         rbtn.addEventListener('click', (e) => {
@@ -23,7 +27,7 @@ function getComputerChoice(max){
             //print player and computer choice in the div assigned for choice selection as follows for all three buttons.
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
-
+            playRound(choice, compChoice);
         });
 
         let pbtn = document.querySelector('.pbtn');
@@ -32,7 +36,7 @@ function getComputerChoice(max){
             compChoice = getComputerChoice(3);
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
-
+            playRound(choice, compChoice);
         });
 
         let sbtn = document.querySelector('.sbtn');
@@ -41,31 +45,28 @@ function getComputerChoice(max){
             compChoice = getComputerChoice(3);
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers choice is ${compChoice}`;
+            playRound(choice, compChoice);
         });
 
-
-        // let humanScore = 0;
-        // let computerScore = 0;
-
         // function playGame(){
-        //     let humanSelection = getHumanChoice();
-        //     let computerSelection = getComputerChoice(3);
-        //     function playRound(humanChoice, computerChoice){
-        //     if(humanChoice === computerChoice){
-        //         console.log("This round is a tie!");
-        //         console.log("Your score: " + humanScore + " Computers score: " + computerScore);
-        //     } else if((humanChoice === "Rock" && computerChoice === "Scissors")||(humanChoice === "Paper" && computerChoice === "Rock")||(humanChoice === "Scissors" && computerChoice === "Paper")){
-        //         console.log("You win!");
-        //         ++humanScore;
-        //         console.log("Your score: " + humanScore + " Computers score: " + computerScore);
-        //     } else {
-        //         console.log("You lose!");
-        //         ++computerScore;
-        //         console.log("Your score: " + humanScore + " Computers score: " + computerScore);
-        //     }
-        // }
+            // let humanSelection = ${choice};
+            // let computerSelection = ${compChoice};
+            function playRound(humanChoice, computerChoice){
+            if(humanChoice === computerChoice){
+                console.log("This round is a tie!");
+                console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+            } else if((humanChoice === "Rock" && computerChoice === "Scissors")||(humanChoice === "Paper" && computerChoice === "Rock")||(humanChoice === "Scissors" && computerChoice === "Paper")){
+                console.log("You win!");
+                ++humanScore;
+                console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+            } else {
+                console.log("You lose!");
+                ++computerScore;
+                console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+            }
+        }
         // playRound(humanSelection, computerSelection);
-        // }
+        // // }
         // for(let i = 0; i<5; i++){
         //     playGame();
         // }
