@@ -20,7 +20,8 @@ function getComputerChoice(max){
         let humanScore = 0;
         let computerScore = 0;
         let round = 0;
-
+        let score = document.querySelector('#score');
+        
         let rbtn = document.querySelector('.rbtn');
         rbtn.addEventListener('click', (e) => {
             choice = rbtn.textContent;
@@ -31,6 +32,7 @@ function getComputerChoice(max){
             if(round < 5){
                 playRound(choice, compChoice);
                 round ++;
+                score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
             }
         });
 
@@ -43,6 +45,7 @@ function getComputerChoice(max){
             if(round < 5){
                 playRound(choice, compChoice);
                 round ++;
+                score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
             }
         });
 
@@ -56,6 +59,7 @@ function getComputerChoice(max){
             if(round < 5){
                 playRound(choice, compChoice);
                 round ++;
+                score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
             }
         });
 
