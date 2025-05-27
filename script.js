@@ -101,3 +101,8 @@ function getComputerChoice(max){
             pbtn.disabled = true;
             sbtn.disabled = true;
         }
+
+        let replay = document.querySelector('#replay');
+        replay.addEventListener('click', (e) => {
+            location.reload();
+        });
