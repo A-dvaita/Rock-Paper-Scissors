@@ -1,84 +1,48 @@
 function getComputerChoice(max){
             let random_no = Math.floor(Math.random() * max);
             if (random_no === 0){
-                console.log(("The computers choice is Rock"));
                 return "Rock";
             }
             else if (random_no === 1){
-                console.log(("The computers choice is Paper"));
                 return "Paper";
             }
             else{
-                console.log(("The computers choice is Scissors"));
                 return "Scissors";
             }
         }
         //get player choice by taking input from button clicked by player
         let choice = '';
+        let compChoice = '';
         let hChoice = document.querySelector('#hChoice');
         let cChoice = document.querySelector('#cChoice');
 
         let rbtn = document.querySelector('.rbtn');
         rbtn.addEventListener('click', (e) => {
             choice = rbtn.textContent;
+            compChoice = getComputerChoice(3);
             //print player and computer choice in the div assigned for choice selection as follows for all three buttons.
             hChoice.textContent = `Your choice is ${choice}`;
-            cChoice.textContent = `The Computers' choice is ${getComputerChoice(3)}`;
+            cChoice.textContent = `The Computers' choice is ${compChoice}`;
 
         });
 
         let pbtn = document.querySelector('.pbtn');
         pbtn.addEventListener('click', (e) => {
             choice = pbtn.textContent;
+            compChoice = getComputerChoice(3);
             hChoice.textContent = `Your choice is ${choice}`;
-            cChoice.textContent = `The Computers' choice is ${getComputerChoice(3)}`;
+            cChoice.textContent = `The Computers' choice is ${compChoice}`;
 
         });
 
         let sbtn = document.querySelector('.sbtn');
         sbtn.addEventListener('click', (e) => {
             choice = sbtn.textContent;
+            compChoice = getComputerChoice(3);
             hChoice.textContent = `Your choice is ${choice}`;
-            cChoice.textContent = `The Computers choice is ${getComputerChoice(3)}`;
+            cChoice.textContent = `The Computers choice is ${compChoice}`;
         });
 
-        // let hChoice = document.querySelector('.hChoice');
-        // hChoice.textContent = `${choice}`;
-
-        // let cChoice = document.querySelector('.cChoice');
-        // cChoice.textContent = `${getComputerChoice(3)}`;
-
-        // let humanChoice ='';
-        // let choices = document.querySelector('#choices');
-        // choices.addEventListener('click', (e) => {
-        //     let btn = document.querySelectorAll('.btn');
-            
-        //     if (btn.textContent = 'Rock'){
-        //         humanChoice = 'Rock';
-        //     }
-
-        //     if(btn.textContent = 'Paper'){
-        //         humanChoice = 'Paper';
-        //     }
-
-        //     if(btn.textContent = 'Scissors'){
-        //         humanChoice = 'Scissors';
-        //     }
-        // });
-
-        // console.log(`humanChoice`);
-
-        // function getHumanChoice(){
-        //     // let input = prompt("Enter you choice: Rock | Paper | Scissors");
-        //     let choice = capitalise(input);
-        //     console.log("Your choice is " + choice);
-        //     return choice;
-        // }
-
-        // function capitalise(string){
-        //     if (!string) return string;
-        //     return string[0].toUpperCase() + string.slice(1).toLowerCase();
-        // }
 
         // let humanScore = 0;
         // let computerScore = 0;
