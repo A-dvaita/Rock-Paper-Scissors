@@ -10,7 +10,7 @@
 body{
     margin: 0;
     height: 100vh;
-    background-color: rgb(91, 247, 91);
+    background-color: rgb(91, 247, 91);;
 }
 
 .buttons{
@@ -18,7 +18,7 @@ body{
     gap: 20px;
 }
 
-button{
+.buttons button{
     width: 200px;
     height: auto;
     padding: 45px 20px 45px;
@@ -40,4 +40,15 @@ button{
     font-size: 30px;
     gap: 20px;
     color: black;
+}
+
+#replay{
+    border-radius: 15px;
+    width: 100px;
+    height: auto;
+    padding: 20px;
+    background-color: darkslateblue;
+    color: darkorange;
+    font-weight: bold;
+    font-size: large;
 }
