@@ -20,8 +20,10 @@ function getComputerChoice(max){
         let humanScore = 0;
         let computerScore = 0;
         let round = 0;
+
         let score = document.querySelector('#score');
-        
+        let result = document.querySelector('#result');
+
         let rbtn = document.querySelector('.rbtn');
         rbtn.addEventListener('click', (e) => {
             choice = rbtn.textContent;
@@ -30,9 +32,11 @@ function getComputerChoice(max){
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
             if(round < 5){
-                playRound(choice, compChoice);
                 round ++;
+                playRound(choice, compChoice);
                 score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
+            } else {
+                showResult();
             }
         });
 
@@ -43,9 +47,11 @@ function getComputerChoice(max){
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
             if(round < 5){
-                playRound(choice, compChoice);
                 round ++;
+                playRound(choice, compChoice);
                 score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
+            } else {
+                showResult();
             }
         });
 
@@ -57,9 +63,11 @@ function getComputerChoice(max){
             cChoice.textContent = `The Computers choice is ${compChoice}`;
             //call playRound function for five rounds
             if(round < 5){
-                playRound(choice, compChoice);
                 round ++;
+                playRound(choice, compChoice);
                 score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
+            } else {
+                showResult();
             }
         });
 
@@ -76,4 +84,20 @@ function getComputerChoice(max){
                 ++computerScore;
                 console.log("Your score: " + humanScore + " Computers score: " + computerScore);
             }
+        }
+
+        function showResult(){
+            if (humanScore === computerScore){
+                result.textContent = 'This game is tied!';
+            } else if (humanScore > computerScore){
+                result.textContent = 'Congratulations! You Won!';
+            } else {
+                result.textContent = 'Sorry, You Lost!';
+            }
+        }
+
+        function endGame(){
+            rbtn.disabled = true;
+            pbtn.disabled = true;
+            sbtn.disabled = true;
         }
