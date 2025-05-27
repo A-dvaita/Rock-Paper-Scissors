@@ -32,10 +32,12 @@ function getComputerChoice(max){
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
             if(round < 5){
-                round ++;
                 playRound(choice, compChoice);
+                round ++;
                 score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
-            } else {
+            } 
+            if(round === 5){
+                endGame();
                 showResult();
             }
         });
@@ -47,10 +49,12 @@ function getComputerChoice(max){
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
             if(round < 5){
-                round ++;
                 playRound(choice, compChoice);
+                round ++;
                 score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
-            } else {
+            } 
+            if(round === 5){
+                endGame();
                 showResult();
             }
         });
@@ -63,10 +67,12 @@ function getComputerChoice(max){
             cChoice.textContent = `The Computers choice is ${compChoice}`;
             //call playRound function for five rounds
             if(round < 5){
-                round ++;
                 playRound(choice, compChoice);
+                round ++;
                 score.textContent = `Your score: ${humanScore} Computer: ${computerScore}`;
-            } else {
+            } 
+            if(round === 5){
+                endGame();
                 showResult();
             }
         });
