@@ -19,6 +19,7 @@ function getComputerChoice(max){
 
         let humanScore = 0;
         let computerScore = 0;
+        let round = 0;
 
         let rbtn = document.querySelector('.rbtn');
         rbtn.addEventListener('click', (e) => {
@@ -27,7 +28,10 @@ function getComputerChoice(max){
             //print player and computer choice in the div assigned for choice selection as follows for all three buttons.
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
-            playRound(choice, compChoice);
+            if(round < 5){
+                playRound(choice, compChoice);
+                round ++;
+            }
         });
 
         let pbtn = document.querySelector('.pbtn');
@@ -36,7 +40,10 @@ function getComputerChoice(max){
             compChoice = getComputerChoice(3);
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers' choice is ${compChoice}`;
-            playRound(choice, compChoice);
+            if(round < 5){
+                playRound(choice, compChoice);
+                round ++;
+            }
         });
 
         let sbtn = document.querySelector('.sbtn');
@@ -45,12 +52,13 @@ function getComputerChoice(max){
             compChoice = getComputerChoice(3);
             hChoice.textContent = `Your choice is ${choice}`;
             cChoice.textContent = `The Computers choice is ${compChoice}`;
-            playRound(choice, compChoice);
+            //call playRound function for five rounds
+            if(round < 5){
+                playRound(choice, compChoice);
+                round ++;
+            }
         });
 
-        // function playGame(){
-            // let humanSelection = ${choice};
-            // let computerSelection = ${compChoice};
             function playRound(humanChoice, computerChoice){
             if(humanChoice === computerChoice){
                 console.log("This round is a tie!");
@@ -65,8 +73,3 @@ function getComputerChoice(max){
                 console.log("Your score: " + humanScore + " Computers score: " + computerScore);
             }
         }
-        // playRound(humanSelection, computerSelection);
-        // // }
-        // for(let i = 0; i<5; i++){
-        //     playGame();
-        // }
