@@ -78,17 +78,11 @@ function getComputerChoice(max){
         });
 
             function playRound(humanChoice, computerChoice){
-            if(humanChoice === computerChoice){
-                console.log("This round is a tie!");
-                console.log("Your score: " + humanScore + " Computers score: " + computerScore);
+            if(humanChoice === computerChoice){ 
             } else if((humanChoice === "Rock" && computerChoice === "Scissors")||(humanChoice === "Paper" && computerChoice === "Rock")||(humanChoice === "Scissors" && computerChoice === "Paper")){
-                console.log("You win!");
                 ++humanScore;
-                console.log("Your score: " + humanScore + " Computers score: " + computerScore);
             } else {
-                console.log("You lose!");
                 ++computerScore;
-                console.log("Your score: " + humanScore + " Computers score: " + computerScore);
             }
         }
 
