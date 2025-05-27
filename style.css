@@ -33,3 +33,10 @@ button{
     border-color: cornflowerblue;
     border-width: medium;
 }
+
+.info{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    gap: 20px;
+}
