@@ -14,26 +14,39 @@ function getComputerChoice(max){
             }
         }
         //get player choice by taking input from button clicked by player
+        let choice = '';
+        let hChoice = document.querySelector('#hChoice');
+        let cChoice = document.querySelector('#cChoice');
+
         let rbtn = document.querySelector('.rbtn');
         rbtn.addEventListener('click', (e) => {
-            let choice = rbtn.textContent;
-            console.log("Your choice is " + choice);
-            return choice;
+            choice = rbtn.textContent;
+            //print player and computer choice in the div assigned for choice selection as follows for all three buttons.
+            hChoice.textContent = `Your choice is ${choice}`;
+            cChoice.textContent = `The Computers' choice is ${getComputerChoice(3)}`;
+
         });
 
         let pbtn = document.querySelector('.pbtn');
         pbtn.addEventListener('click', (e) => {
-            let choice = pbtn.textContent;
-            console.log("Your choice is " + choice);
-            return choice;
+            choice = pbtn.textContent;
+            hChoice.textContent = `Your choice is ${choice}`;
+            cChoice.textContent = `The Computers' choice is ${getComputerChoice(3)}`;
+
         });
 
         let sbtn = document.querySelector('.sbtn');
         sbtn.addEventListener('click', (e) => {
-            let choice = sbtn.textContent;
-            console.log("Your choice is " + choice);
-            return choice;
+            choice = sbtn.textContent;
+            hChoice.textContent = `Your choice is ${choice}`;
+            cChoice.textContent = `The Computers choice is ${getComputerChoice(3)}`;
         });
+
+        // let hChoice = document.querySelector('.hChoice');
+        // hChoice.textContent = `${choice}`;
+
+        // let cChoice = document.querySelector('.cChoice');
+        // cChoice.textContent = `${getComputerChoice(3)}`;
 
         // let humanChoice ='';
         // let choices = document.querySelector('#choices');
@@ -55,12 +68,12 @@ function getComputerChoice(max){
 
         // console.log(`humanChoice`);
 
-        function getHumanChoice(){
-            // let input = prompt("Enter you choice: Rock | Paper | Scissors");
-            let choice = capitalise(input);
-            console.log("Your choice is " + choice);
-            return choice;
-        }
+        // function getHumanChoice(){
+        //     // let input = prompt("Enter you choice: Rock | Paper | Scissors");
+        //     let choice = capitalise(input);
+        //     console.log("Your choice is " + choice);
+        //     return choice;
+        // }
 
         // function capitalise(string){
         //     if (!string) return string;
